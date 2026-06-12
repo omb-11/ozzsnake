@@ -1,42 +1,106 @@
 # OzzSnake
 
-A quick, no-frills Snake game in Python. Just terminal, just fun.
+🐍 **A quick, no-frills Snake game in Python. Just terminal, just fun.**
 
-## Play Now
+---
 
-Want to try it out? Run it right here in your browser:
+## 🎮 Play Now
 
-[![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/omb-11/ozzsnake)
+### Option 1: Play Online 
+👉 **[Play OzzSnake in your browser](https://omb-11.github.io/ozzsnake/)**
 
-Or check it out locally if you've got Python.
+Click the button above and follow the instructions to run the game locally!
 
-## What You Get
-
-- Single Python file – no bloat
-- Works on Windows and Mac/Linux
-- Terminal-based gameplay
-- Keep track of your score
-- Keyboard controls you actually want to use
-
-## Requirements
-
-- Python 3.x
-- Windows? You're all set – uses built-in `msvcrt` for controls
-- Mac/Linux? Same deal – uses a simple raw input approach
-
-## How to Play
-
-**Controls:**
-- W / A / S / D or arrow keys to move the snake
-- Q or Ctrl-C to quit
-
-**Run it:**
+### Option 2: Run Locally
 ```bash
+git clone https://github.com/omb-11/ozzsnake.git
+cd ozzsnake
 python ozzsnake.py
 ```
 
-## About
+---
 
-Built as a fun learning project. It's minimal, it works, and it doesn't pretend to be anything it's not. If you want to add stuff (difficulty levels, high score saving, etc.), feel free to fork and tinker.
+## 🎯 What You Get
 
-License: MIT (see LICENSE file)
+- ✨ Single Python file – no bloat, no dependencies
+- 🖥️ Works on Windows, Mac, and Linux
+- 🎮 Terminal-based gameplay with real-time controls
+- 📊 Keep track of your score
+- ⌨️ Keyboard controls that actually work
+
+---
+
+## 📋 Requirements
+
+- **Python 3.x** (that's it!)
+- Windows? Built-in `msvcrt` handles controls
+- Mac/Linux? Uses standard terminal input
+
+---
+
+## 🎮 How to Play
+
+**Controls:**
+- `W` / `↑` Arrow Up - Move up
+- `S` / `↓` Arrow Down - Move down  
+- `A` / `←` Arrow Left - Move left
+- `D` / `→` Arrow Right - Move right
+- `Q` / `Ctrl+C` - Quit
+
+**Goal:** Eat the food `@` and grow! Don't hit walls or yourself.
+
+---
+
+## 📦 Project Structure
+
+```
+ozzsnake/
+├── ozzsnake.py       # Main game code
+├── index.html        # Web interface
+├── README.md         # This file
+├── LICENSE           # MIT License
+└── package.json      # Project metadata
+```
+
+---
+
+## 🚀 Features
+
+- Smooth, responsive controls
+- Real-time score tracking
+- Cross-platform compatibility
+- Colorful terminal output with emojis
+- Clean, well-documented code
+
+---
+
+## 🛠️ Want to Improve It?
+
+Ideas for enhancements:
+- 🔥 Difficulty levels (easy, hard, insane)
+- 💾 High score saving
+- 🎨 Custom themes/colors
+- 🌐 Multiplayer mode
+- 🎵 Sound effects
+
+Feel free to fork, modify, and share!
+
+---
+
+## 📝 About
+
+Built as a fun learning project. It's minimal, it works, and it doesn't pretend to be anything else. Perfect for learning Python basics or just killing some time.
+
+Created with ❤️ by [Ozzie](https://github.com/omb-11)
+
+---
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) file for details
+
+---
+
+**⭐ If you enjoy OzzSnake, please star this repo! It helps others find it too.**
+
+**Happy gaming! 🎮**

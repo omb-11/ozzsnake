@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OzzSnake - Play Online</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        .game-board {
+            background: #000;
+            color: #0f0;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 16px;
+            line-height: 1.2;
+            margin: 30px 0;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .game-board pre {
+            font-family: 'Courier New', monospace;
+            text-align: left;
+            white-space: pre;
+        }
+
+        .controls {
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .control-item {
+            margin: 10px 0;
+            font-size: 1em;
+            color: #333;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-family: 'Courier New', monospace;
+        }
+
+        .btn-play {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-play:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-github {
+            background: #333;
+            color: white;
+        }
+
+        .btn-github:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(51, 51, 51, 0.4);
+        }
+
+        .score-display {
+            font-size: 2em;
+            color: #667eea;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .info {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            color: #1976d2;
+            font-size: 0.95em;
+            text-align: left;
+        }
+
+        .emoji {
+            font-size: 1.5em;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><span class="emoji">🐍</span> OzzSnake <span class="emoji">🐍</span></h1>
+        <p class="subtitle">A quick, no-frills terminal Snake game</p>
+
+        <div class="game-board">
+            <div>
+                <p>🎮 Ready to play?</p>
+                <p style="margin-top: 20px; font-size: 14px;">Click "Run Locally" to start the game in your terminal</p>
+            </div>
+        </div>
+
+        <div class="score-display" id="scoreDisplay">Score: 0</div>
+
+        <div class="controls">
+            <h3 style="margin-bottom: 15px; color: #333;">How to Play</h3>
+            <div class="control-item"><strong>⬆️ W / Arrow Up</strong> - Move Up</div>
+            <div class="control-item"><strong>⬇️ S / Arrow Down</strong> - Move Down</div>
+            <div class="control-item"><strong>⬅️ A / Arrow Left</strong> - Move Left</div>
+            <div class="control-item"><strong>➡️ D / Arrow Right</strong> - Move Right</div>
+            <div class="control-item"><strong>❌ Q / Ctrl+C</strong> - Quit</div>
+        </div>
+
+        <div class="button-group">
+            <button class="btn-play" onclick="runGame()">🎮 Run Locally</button>
+            <button class="btn-github" onclick="window.open('https://github.com/omb-11/ozzsnake', '_blank')">
+                ⭐ View on GitHub
+            </button>
+        </div>
+
+        <div class="info">
+            <strong>💡 How to run:</strong>
+            <ol style="margin-left: 20px; margin-top: 10px; text-align: left;">
+                <li>Make sure you have Python 3 installed</li>
+                <li>Clone or download the repository</li>
+                <li>Open terminal and run: <code>python ozzsnake.py</code></li>
+                <li>Use keyboard controls to move the snake</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function runGame() {
+            alert('🎮 To play OzzSnake:\n\n1. Open your terminal/command prompt\n2. Clone the repo: git clone https://github.com/omb-11/ozzsnake.git\n3. Navigate to folder: cd ozzsnake\n4. Run: python ozzsnake.py\n\nHave fun! 🐍');
+        }
+    </script>
+</body>
+</html>

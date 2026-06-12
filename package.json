@@ -1,0 +1,29 @@
+{
+  "name": "ozzsnake",
+  "version": "1.0.0",
+  "description": "A quick, no-frills Snake game in Python",
+  "main": "ozzsnake.py",
+  "scripts": {
+    "start": "python ozzsnake.py",
+    "test": "echo \"Run: python ozzsnake.py\""
+  },
+  "keywords": [
+    "snake",
+    "game",
+    "python",
+    "terminal",
+    "cli",
+    "fun",
+    "learning"
+  ],
+  "author": "omb-11",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/omb-11/ozzsnake.git"
+  },
+  "bugs": {
+    "url": "https://github.com/omb-11/ozzsnake/issues"
+  },
+  "homepage": "https://github.com/omb-11/ozzsnake#readme"
+}

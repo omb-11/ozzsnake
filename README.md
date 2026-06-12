@@ -1,25 +1,42 @@
 # OzzSnake
 
-A tiny ASCII Snake game in Python.
+A quick, no-frills Snake game in Python. Just terminal, just fun.
 
-Features
-- Small, single-file Python implementation
-- Cross-platform input handling (Windows and Unix-like)
+## Play Now
+
+Want to try it out? Run it right here in your browser:
+
+[![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/omb-11/ozzsnake)
+
+Or check it out locally if you've got Python.
+
+## What You Get
+
+- Single Python file – no bloat
+- Works on Windows and Mac/Linux
 - Terminal-based gameplay
-- Score tracking
+- Keep track of your score
+- Keyboard controls you actually want to use
 
-Requirements
+## Requirements
+
 - Python 3.x
-- On Windows the script uses `msvcrt` for key input (built-in).
-- On Unix-like systems the script uses a small raw-input fallback.
+- Windows? You're all set – uses built-in `msvcrt` for controls
+- Mac/Linux? Same deal – uses a simple raw input approach
 
-Controls
-- W / A / S / D or arrow keys — move
-- Q or Ctrl-C — quit
+## How to Play
 
-Run
-- From a terminal: `python ozzsnake.py`
+**Controls:**
+- W / A / S / D or arrow keys to move the snake
+- Q or Ctrl-C to quit
 
-Notes
-- This repo contains a tiny game intended for learning/fun. If you want a package, packaging, or enhancements (difficulty levels, high score save, etc.), I can add them.
-- License: MIT (LICENSE file included)
+**Run it:**
+```bash
+python ozzsnake.py
+```
+
+## About
+
+Built as a fun learning project. It's minimal, it works, and it doesn't pretend to be anything it's not. If you want to add stuff (difficulty levels, high score saving, etc.), feel free to fork and tinker.
+
+License: MIT (see LICENSE file)
